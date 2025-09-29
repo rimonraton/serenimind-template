@@ -120,7 +120,7 @@ const DetailedAssessmentPage = () => {
       </div>
 
       {/* Content */}
-      <div className="flex-1 p-4">
+      <div className="flex-1 p-1">
         <div className="max-w-2xl mx-auto">
           <div className="bg-white rounded-3xl p-8 shadow-lg">
             {/* Header */}
