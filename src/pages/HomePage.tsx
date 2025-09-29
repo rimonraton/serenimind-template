@@ -18,6 +18,14 @@ const HomePage: React.FC = () => {
 
   const pages = [
     {
+      id: 'checkin',
+      title: 'Quick Check-in',
+      description: 'Start your daily wellness check-in',
+      icon: <Activity size={48} className="text-blue-600" />,
+      color: 'border-blue-200 hover:border-blue-400 hover:bg-blue-50',
+      path: '/checkin'
+    },
+    {
       id: 'dashboard',
       title: 'Dashboard',
       description: 'Overview and analytics dashboard',
@@ -27,18 +35,18 @@ const HomePage: React.FC = () => {
     },
     {
       id: 'assessment',
-      title: 'Assessment',
-      description: 'Create new craving assessment',
-      icon: <Activity size={48} className="text-blue-600" />,
-      color: 'border-blue-200 hover:border-blue-400 hover:bg-blue-50',
+      title: 'Full Assessment',
+      description: 'Complete detailed craving assessment',
+      icon: <FileText size={48} className="text-green-600" />,
+      color: 'border-green-200 hover:border-green-400 hover:bg-green-50',
       path: '/assessment'
     },
     {
       id: 'history',
       title: 'History',
       description: 'View assessment history and trends',
-      icon: <FileText size={48} className="text-green-600" />,
-      color: 'border-green-200 hover:border-green-400 hover:bg-green-50',
+      icon: <BarChart3 size={48} className="text-purple-600" />,
+      color: 'border-purple-200 hover:border-purple-400 hover:bg-purple-50',
       path: '/history'
     },
     {

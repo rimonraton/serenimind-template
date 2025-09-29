@@ -9,6 +9,7 @@ import PatientDetailPage from "./pages/PatientDetailPage";
 import UsersPage from "./pages/UsersPage";
 import ProfilePage from "./pages/ProfilePage";
 import SettingsPage from "./pages/SettingsPage";
+import QuickCheckinPage from "./pages/QuickCheckinPage";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         <Routes>
           {/* Home Route */}
           <Route path="/" element={<HomePage />} />
+
+          {/* Quick Check-in Route */}
+          <Route path="/checkin" element={<QuickCheckinPage />} />
 
           {/* All other routes include Navbar */}
           <Route
