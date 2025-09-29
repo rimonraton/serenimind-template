@@ -159,59 +159,59 @@ const QuickCheckinPage = () => {
   const progress = ((currentStep + 1) / steps.length) * 100;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50">
+    <div className="h-screen bg-gradient-to-br from-teal-50 to-blue-50 flex flex-col overflow-hidden">
       {/* Header */}
-      <div className="bg-white shadow-sm">
-        <div className="flex items-center justify-between p-4">
+      <div className="bg-white shadow-sm flex-shrink-0">
+        <div className="flex items-center justify-between px-4 py-3">
           <button
             onClick={handleBack}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+            className="p-1.5 rounded-full hover:bg-gray-100 transition-colors"
           >
-            <ArrowLeft size={24} className="text-gray-600" />
+            <ArrowLeft size={20} className="text-gray-600" />
           </button>
           
           <div className="flex items-center space-x-2">
-            <img src="/logo.png" alt="SERENIMiND" className="h-8" />
+            <img src="/logo.png" alt="SERENIMiND" className="h-6" />
           </div>
           
-          <div className="text-sm text-gray-500">
+          <div className="text-xs text-gray-500">
             {currentStep + 1} of {steps.length}
           </div>
         </div>
         
         {/* Progress Bar */}
-        <div className="h-1 bg-gray-200">
+        <div className="h-0.5 bg-gray-200">
           <div 
-            className="h-full bg-teal-500 transition-all duration-300 ease-out"
+            className="h-full bg-teal-500 transition-all duration-500 ease-out"
             style={{ width: `${progress}%` }}
           />
         </div>
       </div>
 
       {/* Content */}
-      <div className="flex-1 flex items-center justify-center p-4 pt-8">
-        <div className="max-w-md w-full">
-          <div className="bg-white rounded-3xl p-8 shadow-lg">
+      <div className="flex-1 flex items-center justify-center px-4 py-2 min-h-0">
+        <div className="max-w-sm w-full">
+          <div className="bg-white rounded-2xl p-6 shadow-lg h-full flex flex-col justify-center">
             {/* Question */}
-            <div className="text-center mb-8">
-              <h1 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
+            <div className="text-center mb-6">
+              <h1 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
                 {currentStepData.question}
               </h1>
               {currentStepData.subtitle && (
-                <p className="text-gray-600 italic">
+                <p className="text-sm text-gray-600 italic">
                   {currentStepData.subtitle}
                 </p>
               )}
             </div>
 
             {/* Options */}
-            <div className="space-y-4">
+            <div className="space-y-3">
               {currentStepData.options.map((option, index) => (
                 <button
                   key={option.value}
                   onClick={() => handleOptionSelect(option.value)}
                   className={`
-                    w-full flex items-center p-4 rounded-2xl border-2 transition-all duration-200
+                    w-full flex items-center p-3 rounded-xl border-2 transition-all duration-200
                     hover:border-teal-300 hover:bg-teal-50 hover:scale-105
                     ${responses[currentStepData.id] === option.value 
                       ? 'border-teal-500 bg-teal-50' 
@@ -222,8 +222,8 @@ const QuickCheckinPage = () => {
                     animationDelay: `${index * 100}ms`
                   }}
                 >
-                  <span className="text-3xl mr-4">{option.emoji}</span>
-                  <span className="text-lg font-medium text-gray-900 text-left">
+                  <span className="text-2xl mr-3">{option.emoji}</span>
+                  <span className="text-base font-medium text-gray-900 text-left">
                     {option.label}
                   </span>
                 </button>
@@ -234,13 +234,13 @@ const QuickCheckinPage = () => {
       </div>
 
       {/* Bottom Navigation */}
-      <div className="bg-white border-t p-4">
-        <div className="max-w-md mx-auto flex justify-between items-center">
+      <div className="bg-white border-t px-4 py-3 flex-shrink-0">
+        <div className="max-w-sm mx-auto flex justify-between items-center">
           <button
             onClick={handleBack}
-            className="flex items-center text-gray-600 hover:text-gray-800 transition-colors"
+            className="flex items-center text-sm text-gray-600 hover:text-gray-800 transition-colors"
           >
-            <ArrowLeft size={20} className="mr-1" />
+            <ArrowLeft size={16} className="mr-1" />
             Back
           </button>
           
@@ -248,14 +248,14 @@ const QuickCheckinPage = () => {
             {steps.map((_, index) => (
               <div
                 key={index}
-                className={`w-2 h-2 rounded-full transition-colors ${
+                className={`w-1.5 h-1.5 rounded-full transition-colors ${
                   index <= currentStep ? 'bg-teal-500' : 'bg-gray-300'
                 }`}
               />
             ))}
           </div>
           
-          <div className="w-12" /> {/* Spacer for balance */}
+          <div className="w-10" /> {/* Spacer for balance */}
         </div>
       </div>
     </div>
