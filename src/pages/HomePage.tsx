@@ -2,16 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card, { CardContent } from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { 
-  Users, 
-  Shield, 
-  Stethoscope, 
-  Activity, 
-  BarChart3, 
-  FileText, 
-  Settings,
-  UserCircle
-} from 'lucide-react';
+import { Users, Shield, Stethoscope, Activity, ChartBar as BarChart3, FileText, Settings, CircleUser as UserCircle } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
