@@ -125,9 +125,7 @@ const DetailedAssessmentPage = () => {
           <div className="bg-white rounded-3xl p-3 shadow-lg">
             {/* Header */}
             <div className="text-center mb-5">
-              <h1 className="text-xl font-bold text-gray-900 mb-3">
-                Please tell us how much you agree with each statement right now
-              </h1>
+              
             </div>
 
             {/* Questions */}
