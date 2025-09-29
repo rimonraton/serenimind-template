@@ -33,6 +33,14 @@ const HomePage: React.FC = () => {
       path: '/assessment'
     },
     {
+      id: 'detailed-assessment',
+      title: 'Detailed Assessment',
+      description: 'Comprehensive craving intensity evaluation',
+      icon: <FileText size={48} className="text-indigo-600" />,
+      color: 'border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50',
+      path: '/detailed-assessment'
+    },
+    {
       id: 'history',
       title: 'History',
       description: 'View assessment history and trends',

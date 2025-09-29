@@ -24,6 +24,7 @@ const Navbar = () => {
     { label: "Dashboard", path: "/dashboard" },
     { label: "Quick Check-in", path: "/checkin" },
     { label: "Assessment", path: "/assessment" },
+    { label: "Detailed Assessment", path: "/detailed-assessment" },
     { label: "History", path: "/history" },
     { label: "Patients", path: "/patients" },
     { label: "Users", path: "/users" },
