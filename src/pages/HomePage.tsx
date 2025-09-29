@@ -17,6 +17,14 @@ const HomePage: React.FC = () => {
       path: '/checkin'
     },
     {
+      id: 'patient-home',
+      title: 'Patient Home',
+      description: 'Patient-focused home page with dynamic greetings',
+      icon: <UserCircle size={48} className="text-pink-600" />,
+      color: 'border-pink-200 hover:border-pink-400 hover:bg-pink-50',
+      path: '/patient-home'
+    },
+    {
       id: 'dashboard',
       title: 'Dashboard',
       description: 'Overview and analytics dashboard',

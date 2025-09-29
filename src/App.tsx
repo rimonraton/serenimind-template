@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import HomePage from "./pages/HomePage";
+import PatientHomePage from "./pages/PatientHomePage";
 import DashboardPage from "./pages/DashboardPage";
 import AssessmentPage from "./pages/AssessmentPage";
 import HistoryPage from "./pages/HistoryPage";
@@ -19,6 +20,9 @@ function App() {
         <Routes>
           {/* Home Route */}
           <Route path="/" element={<HomePage />} />
+          
+          {/* Patient Home Route */}
+          <Route path="/patient-home" element={<PatientHomePage />} />
 
           {/* Quick Check-in Route */}
           <Route path="/checkin" element={<QuickCheckinPage />} />
